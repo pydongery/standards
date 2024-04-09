@@ -23,13 +23,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  generate:
     runs-on: ubuntu-latest
-
     - name: Checkout
       uses: actions/checkout@v4
       with:
-        fetch-depth: 0
         submodules: true
 
     - name: Setup Pages
