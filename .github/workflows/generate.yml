@@ -29,39 +29,40 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          submodules: true
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        submodules: true
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+    - name: Setup Pages
+      uses: actions/configure-pages@v5
 
-      - name: Prepare cppwp
+    - name: Prepare cppwp
       run: |
         cd cppwp
         mkdir c++
         mv *.* c++
 
-      - name: Copy standards
-        run: |
-          mkdir build
-          cp -r cppwp/c++ build/c++
-          cp -r cppwp/n3337 build/c++11
-          cp -r cppwp/n4140 build/c++14
-          cp -r cppwp/n4659 build/c++17
-          cp -r cppwp/n4861 build/c++20
-          cp -r cppwp/n4950 build/c++23
+    - name: Copy standards
+      run: |
+        mkdir build
+        cp -r cppwp/c++ build/c++
+        cp -r cppwp/n3337 build/c++11
+        cp -r cppwp/n4140 build/c++14
+        cp -r cppwp/n4659 build/c++17
+        cp -r cppwp/n4861 build/c++20
+        cp -r cppwp/n4950 build/c++23
 
-      - name: Copy index
-        run: |
-          mkdir -p build
-          cp index.html build/index.html
+    - name: Copy index
+      run: |
+        mkdir -p build
+        cp index.html build/index.html
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'build'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: 'build'
+
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
