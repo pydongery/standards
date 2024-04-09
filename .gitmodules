@@ -1,0 +1,4 @@
+[submodule "cppwp"]
+	path = cppwp
+	url = https://github.com/timsong-cpp/cppwp
+	branch = gh-pages

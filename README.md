@@ -1,0 +1,1 @@
+Collection of inofficial language standards as HTML.
