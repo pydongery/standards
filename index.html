@@ -1,16 +1,90 @@
 <!DOCTYPE html>
 <html>
-<head><title>C++ standards</title></head>
-<body>
-    <h1>C++ standards</h1>
-    <p>Note that all of these are completely inofficial HTML versions of various C++ working papers. These are not ISO publications.</p>
-    <ul>
-        <li><a href="c++">Latest draft</a></li>
-        <li><a href="c++23">C++23 N4950</a></li>
-        <li><a href="c++20">C++20 N4868</a></li>
-        <li><a href="c++17">C++17 N4659</a></li>
-        <li><a href="c++14">C++14 N4140</a></li>
-        <li><a href="c++11">C++11 N3337</a></li>
-    </ul>
-</body>
+    <head>
+        <title>C++ standards</title>
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            body {
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+                background: #282C34;
+            }
+            #content {
+                background: #fff;
+                font-family: sans-serif;
+                border-radius: 10px;
+                box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                max-width: calc(min(800px, 80vw));
+                max-height: 80vh;
+                overflow: scroll;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 30px;
+            }
+            #logos {
+                font-size: 0; /* hack for whitespace between the img/div tags */
+            }
+            #logos .logo-wrapper {
+                width: 50%;
+                display: inline-block;
+            }
+            #logos .logo-wrapper img {
+                max-width: 100%;
+            }
+            #cpp {
+                transform: scale(0.9);
+            }
+            #content h1 {
+                text-align: center;
+                font-size: 3em;
+            }
+            #content ul {
+                padding: 0;
+                text-align: center;
+                margin-bottom: 0;
+            }
+            #content li {
+                list-style: none;
+                margin-top: 15px;
+            }
+            #content a {
+                color: #498df6;
+                font-size: 1.3em;
+            }
+            #content .doc {
+                color: #a6a6a6;
+                font-size: 1.3em;
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <div id="logos">
+                <div class="logo-wrapper">
+                    <img src="https://pydong.org/assets/img/avatar.svg" />
+                </div>
+                <div class="logo-wrapper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" id="cpp" />
+                </div>
+            </div>
+            <h1>C++ Standards</h1>
+            <em>Please note that these are unofficial self-hosted copies of the official drafts.</em>
+            <ul>
+                <li><a href="c++">Latest draft</a></li>
+                <li><a href="c++23">C++23</a> <span class="doc">(N4950)</span></li>
+                <li><a href="c++20">C++20</a> <span class="doc">(N4868)</span></li>
+                <li><a href="c++17">C++17</a> <span class="doc">(N4659)</span></li>
+                <li><a href="c++14">C++14</a> <span class="doc">(N4140)</span></li>
+                <li><a href="c++11">C++11</a> <span class="doc">(N3337)</span></li>
+            </ul>
+        </div>
+    </body>
 </html>
