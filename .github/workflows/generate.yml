@@ -50,7 +50,7 @@ jobs:
         cp -r cppwp/n3337 build/c++11
         cp -r cppwp/n4140 build/c++14
         cp -r cppwp/n4659 build/c++17
-        cp -r cppwp/n4861 build/c++20
+        cp -r cppwp/n4868 build/c++20
         cp -r cppwp/n4950 build/c++23
 
     - name: Copy index
